@@ -26,5 +26,5 @@ public class Warehouse {
 
     @NotNull(message = ID_SOCKS)
     @Column(name = "socks_id")
-   private Long socksId;
+    private Long socksId;
 }

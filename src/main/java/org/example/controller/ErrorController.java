@@ -38,6 +38,7 @@ public class ErrorController {
     public ErrorResponse handleSocksNotEnoughException(final SocksNotEnoughException exception) {
         return new ErrorResponse(exception.getMessage(), HttpStatus.CONFLICT.name(), LocalDateTime.now());
     }
+
     @ExceptionHandler
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorResponse handleMethodArgumentNotValidException(final MethodArgumentNotValidException exception) {

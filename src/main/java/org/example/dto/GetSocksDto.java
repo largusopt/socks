@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import static org.example.exception.message.SocksExceptionMessage.*;
-import static org.example.exception.message.SocksExceptionMessage.COTTON_PART_IS_INVALID;
 
 @AllArgsConstructor
 @NoArgsConstructor

@@ -21,23 +21,23 @@ public class SocksController {
     @PostMapping("/income")
     @ResponseStatus(HttpStatus.CREATED)
     public SocksDto income(@Valid @RequestBody SocksDto incomeSocks) {
-        log.info("Выполнение запроса на добавление носков: {}",incomeSocks);
-        SocksDto socksDto= socksFacade.income(incomeSocks);
-        log.info("Запрос на добавление носков выполнен: {}",socksDto);
+        log.info("Выполнение запроса на добавление носков: {}", incomeSocks);
+        SocksDto socksDto = socksFacade.income(incomeSocks);
+        log.info("Запрос на добавление носков выполнен: {}", socksDto);
         return socksDto;
     }
 
     @DeleteMapping("/outcome")
     public SocksDto outcome(@Valid @RequestBody SocksDto outcomeSocks) {
-        log.info("Выполнение запроса на удаление носков: {}",outcomeSocks);
-        SocksDto socksDto =socksFacade.outcome(outcomeSocks);
-        log.info("Запрос на удаление носков выполнен: {}",socksDto);
+        log.info("Выполнение запроса на удаление носков: {}", outcomeSocks);
+        SocksDto socksDto = socksFacade.outcome(outcomeSocks);
+        log.info("Запрос на удаление носков выполнен: {}", socksDto);
         return socksDto;
     }
 
     @GetMapping
     public List<SocksDto> getSocksByColorAndCottonPartAndOperation(@Valid @RequestBody GetSocksDto getSocksDto) {
-        log.info("Выполнение запроса на поиск носков: {}",getSocksDto);
+        log.info("Выполнение запроса на поиск носков: {}", getSocksDto);
         List<SocksDto> socks = socksFacade.getSocksByColorAndCottonPartAndOperation(getSocksDto);
         log.info("Запрос на поиск носков выполнен");
         return socks;
